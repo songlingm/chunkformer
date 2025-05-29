@@ -6,6 +6,4 @@ sudo apt install ffmpeg python3-pip -y
 
 sudo pip install -r requirements.txt
 
-pip install huggingface_hub
-
 huggingface-cli download khanhld/chunkformer-large-vie --local-dir "./chunkformer-large-vie"
