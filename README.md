@@ -87,7 +87,6 @@
 
 <a name = "citation" ></a>
 ## Citation
-If you use this work in your research, please cite:
 
 ```bibtex
 @INPROCEEDINGS{10888640,
