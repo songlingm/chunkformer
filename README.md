@@ -2,7 +2,6 @@
 
  Đây là bản fork sử dụng [`pvrecorder`](https://github.com/Picovoice/pvrecorder) để ghi âm giọng nói thành file `.wav` trong 5 giây, sau đó chuyển đổi thành văn bản tiếng Việt bằng mô hình [`chunkformer-large-vie`](https://huggingface.co/khanhld/chunkformer-large-vie).
 
- > ⚠️ Lưu ý: Trước khi chạy mô hình, cần chỉnh đúng **index micro** trong file `record_and_transcribe.py`.
 
  ---
 
