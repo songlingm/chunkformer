@@ -1,58 +1,88 @@
-# 🗣️ Speech-to-Text Offline with Chunkformer
+ # 🗣️ Speech-to-Text Offline with Chunkformer
 
-@ Dự án sử dụng [`pvrecorder`](https://github.com/Picovoice/pvrecorder) để ghi âm giọng nói thành file `.wav` trong 5 giây, sau đó chuyển đổi thành văn bản tiếng Việt bằng mô hình [`chunkformer-large-vie`](https://huggingface.co/khanhld/chunkformer-large-vie).
+ Dự án sử dụng [`pvrecorder`](https://github.com/Picovoice/pvrecorder) để ghi âm giọng nói thành file `.wav` trong 5 giây, sau đó chuyển đổi thành văn bản tiếng Việt bằng mô hình [`chunkformer-large-vie`](https://huggingface.co/khanhld/chunkformer-large-vie).
 
-@ > ⚠️ Lưu ý: Trước khi chạy mô hình, cần chỉnh đúng **index micro** trong file `record_and_transcribe.py`.
+ > ⚠️ Lưu ý: Trước khi chạy mô hình, cần chỉnh đúng **index micro** trong file `record_and_transcribe.py`.
 
----
+ ---
 
-## 📁 Source
+ ## 📁 Nguồn tham khảo
 
-@ Khanhld (Chunkformer)  
-@ Source code: https://github.com/khanld/chunkformer  
-@ Model: https://huggingface.co/khanhld/chunkformer-large-vie  
+ * **Mô hình Chunkformer**
+   * Tác giả: [Khanhld](https://github.com/khanld/chunkformer)
+   * Mã nguồn: [https://github.com/khanld/chunkformer](https://github.com/khanld/chunkformer)
+   * Mô hình: [https://huggingface.co/khanhld/chunkformer-large-vie](https://huggingface.co/khanhld/chunkformer-large-vie)
 
-@ Picovoice (pvrecorder)  
-@ Homepage: https://picovoice.ai/  
-@ Source code: https://github.com/Picovoice/pvrecorder  
+ * **Thư viện ghi âm pvrecorder**
+   * Trang chủ: [https://picovoice.ai/](https://picovoice.ai/)
+   * Mã nguồn: [https://github.com/Picovoice/pvrecorder](https://github.com/Picovoice/pvrecorder)
 
----
+ ---
 
-## 🚀 Deploy
+ ## 🚀 Cài đặt & Triển khai
 
-### ✅ For Ubuntu or apt-based Linux packages:
+ ### ✅ Yêu cầu hệ thống
 
-@ 1. Download the ChunkFormer Repository (forked)
-```bash
-@ git clone https://github.com/songlingm/chunkformer.git
-@ cd chunkformer
-@ sudo apt update && sudo apt upgrade -y
-@ sudo apt install ffmpeg python3-pip python3.10-venv -y
-@ python3 -m venv venv
-@ source venv/bin/activate
-@ sudo pip install -r requirements.txt
-```
+ * Hệ điều hành: Ubuntu hoặc các bản phân phối Linux dựa trên `apt`
+ * Python ≥ 3.10
 
-@ 2. Download the Model Checkpoint from Hugging Face
-```bash
-@ huggingface-cli download khanhld/chunkformer-large-vie --local-dir "./chunkformer-large-vie"
-```
+ ---
 
-@ 3. Check index micro and replace duration and index on `record_and_transcribe.py`
-```bash
-@ python3 list_devices.py # lấy index của micro
-```
+ ### 🔧 Các bước triển khai
 
-@ 4. Run the model
-```bash
-@ python3 record_and_transcribe.py # Nếu lỗi record thì sửa đúng index cho pvrecorder
-```
+ 1. **Clone repository (đã fork):**
+    ```bash
+    git clone https://github.com/songlingm/chunkformer.git
+    cd chunkformer
+    ```
 
----
+ 2. **Cập nhật hệ thống & cài đặt dependencies:**
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    sudo apt install ffmpeg python3-pip python3.10-venv -y
+    ```
 
-@ 📌 Ghi chú:
-@ - `pvrecorder` có thể yêu cầu quyền truy cập vào thiết bị ghi âm — hãy đảm bảo thiết bị đã được cấp quyền.
-@ - Mô hình hoạt động **offline** hoàn toàn sau khi đã tải về checkpoint từ Hugging Face.
+ 3. **(Optional) Tạo và kích hoạt môi trường ảo:**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+ 4. **Cài đặt các thư viện cần thiết:**
+    ```bash
+    sudo pip install -r requirements.txt
+    ```
+
+ 5. **Tải checkpoint mô hình từ Hugging Face:**
+    ```bash
+    huggingface-cli download khanhld/chunkformer-large-vie --local-dir "./chunkformer-large-vie"
+    ```
+
+ 6. **Xác định và chỉnh `index` micro:**
+    ```bash
+    python3 list_devices.py  # Kiểm tra index của micro
+    ```
+
+    ➡️ Sau đó sửa `index` và `duration` trong `record_and_transcribe.py` theo nhu cầu. Mặc định duration = 5 (file .wav sẽ có thời lượng là 5s)
+
+ 7. **Chạy chương trình chuyển đổi giọng nói sang văn bản:**
+    ```bash
+    python3 record_and_transcribe.py
+    ```
+
+    > ⚠️ Nếu gặp lỗi khi ghi âm, hãy kiểm tra lại `index` của micro cho đúng với thiết bị ghi âm của bạn.
+
+ ---
+
+ ## 📌 Ghi chú
+
+ * `pvrecorder` đôi khi yêu cầu quyền truy cập thiết bị ghi âm — hãy đảm bảo thiết bị của bạn đã được cấp quyền.
+ * Mô hình hoạt động **offline** hoàn toàn sau khi đã tải về checkpoint.
+
+ ---
+
+
+
 
 
 <a name = "citation" ></a>
