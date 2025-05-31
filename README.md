@@ -10,12 +10,12 @@
 
  * **Mô hình Chunkformer**
    * Tác giả: [Khanhld](https://github.com/khanld/chunkformer)
-   * Mã nguồn: [https://github.com/khanld/chunkformer](https://github.com/khanld/chunkformer)
-   * Mô hình: [https://huggingface.co/khanhld/chunkformer-large-vie](https://huggingface.co/khanhld/chunkformer-large-vie)
+   * Mã nguồn: [chunkformer](https://github.com/khanld/chunkformer)
+   * Mô hình: [chunkformer-large-vie](https://huggingface.co/khanhld/chunkformer-large-vie)
 
  * **Thư viện ghi âm pvrecorder**
-   * Trang chủ: [https://picovoice.ai/](https://picovoice.ai/)
-   * Mã nguồn: [https://github.com/Picovoice/pvrecorder](https://github.com/Picovoice/pvrecorder)
+   * Trang chủ: [Picovoice.ai](https://picovoice.ai/)
+   * Mã nguồn: [pvrecorder](https://github.com/Picovoice/pvrecorder)
 
  ---
 
