@@ -1,8 +1,6 @@
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 
-sudo apt upgrade -y
-
-sudo apt install ffmpeg python3-pip python3.12-venv -y
+sudo apt install ffmpeg python3-pip python3.10-venv -y
 
 python3 -m venv venv
 
@@ -11,3 +9,7 @@ source venv/bin/activate
 sudo pip install -r requirements.txt
 
 huggingface-cli download khanhld/chunkformer-large-vie --local-dir "./chunkformer-large-vie"
+
+python3 list_devices.py #lấy index của micro
+
+python3 record_and_transcribe.py #Nếu lỗi record thì sửa đúng index cho pvrecorder
