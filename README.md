@@ -1,6 +1,6 @@
  # 🗣️ Speech-to-Text Offline with Chunkformer
 
- Dự án sử dụng [`pvrecorder`](https://github.com/Picovoice/pvrecorder) để ghi âm giọng nói thành file `.wav` trong 5 giây, sau đó chuyển đổi thành văn bản tiếng Việt bằng mô hình [`chunkformer-large-vie`](https://huggingface.co/khanhld/chunkformer-large-vie).
+ Fork sử dụng [`pvrecorder`](https://github.com/Picovoice/pvrecorder) để ghi âm giọng nói thành file `.wav` trong 5 giây, sau đó chuyển đổi thành văn bản tiếng Việt bằng mô hình [`chunkformer-large-vie`](https://huggingface.co/khanhld/chunkformer-large-vie).
 
  > ⚠️ Lưu ý: Trước khi chạy mô hình, cần chỉnh đúng **index micro** trong file `record_and_transcribe.py`.
 
@@ -102,3 +102,7 @@ If you use this work in your research, please cite:
   doi={10.1109/ICASSP49660.2025.10888640}}
 
 ```
+---
+<a name = "contact"></a>
+## Contact
+- lampt.b19vt216@stu.ptit.edu.vn
