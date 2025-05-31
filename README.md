@@ -23,8 +23,8 @@
 
  ### ✅ Yêu cầu hệ thống
 
- * Hệ điều hành: Ubuntu hoặc các bản phân phối Linux dựa trên `apt`
- * Python ≥ 3.10
+ * Hệ điều hành: Ubuntu hoặc các bản phân phối Linux **có sử dụng hệ quản lý gói `apt`** (ví dụ: Debian, Linux Mint, Pop!_OS, v.v.
+ * Phiên bản Python: **Python 3.10 hoặc cao hơn**
 
  ---
 
