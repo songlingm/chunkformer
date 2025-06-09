@@ -62,7 +62,7 @@
     python3 list_devices.py  # Kiểm tra index của micro
     ```
 
-    ➡️ Sau đó sửa `index` và `duration` trong `record_and_transcribe.py` theo nhu cầu. Mặc định duration = 5 (file .wav sẽ có thời lượng là 5s)
+    ➡️ Sau đó sửa `index` và `duration` trong `streaming_transcribe.py` theo nhu cầu. Mặc định duration = 5 (file .wav sẽ có thời lượng là 5s)
 
  7. **Chạy chương trình chuyển đổi giọng nói sang văn bản:**
     ```bash
