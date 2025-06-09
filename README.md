@@ -77,6 +77,7 @@
 
  * `pvrecorder` đôi khi yêu cầu quyền truy cập thiết bị ghi âm — hãy đảm bảo thiết bị của bạn đã được cấp quyền.
  * Mô hình hoạt động **offline** hoàn toàn sau khi đã tải về checkpoint.
+ * Trong khi chương trình chạy, có thể nói liên tục mà không cần quan tâm đến độ dài của từng đoạn audio wav chia nhỏ.
 
  ---
 
